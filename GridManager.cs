@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class GridManager : MonoBehaviour
             for(int x = 0; x < width; x++)
             {
                 gameGrid[x, z] = Instantiate(gridCellPrefabs, new Vector3(x * gridSpaceSize,0, z * gridSpaceSize), Quaternion.identity);
-                //gameGrid[x, z].GetComponentInChildren<TextMesh>().text = birdsList[Random.Range(0, birdsList.Count)];
+                gameGrid[x, z].GetComponentInChildren<TextMesh>().text = birdsList[Random.Range(0, birdsList.Count)];
 
             }
         }
